@@ -1,5 +1,6 @@
 // Exercício-1 em JavaScript
 
+
 var car = {
     marca: 'fiat',
     modelo: 'uno',
@@ -52,7 +53,9 @@ car.adicionarPessoas = function(numeroPessoas) {
         return `Já temos ${totalPessoas} pessoas no carro!`;
 };
 
+
 // Exercício-2 em JavaScript
+
 
 let myarray = [10, 'leonardo', null, {a: 1}, function(){}];
 
@@ -72,6 +75,8 @@ console.log(myFunction2(myarray2, 1));
 console.log(myFunction2(myarray2, 2));
 console.log(myFunction2(myarray2, 3));
 console.log(myFunction2(myarray2, 4));
+
+//-------------------------------------------------------------------------------------------
 
 function book(bookName) {
     let allBooks = {
@@ -104,3 +109,70 @@ console.log(`O autor do livro ${bookName} é ${book(bookName).autor}.`);
 
 console.log(`O livro ${bookName} foi publicado pela editora ${book(bookName).editora}.`);
 
+
+// Exercício-3 em JavaScript
+
+
+let championship = 'Campeonato Paulista';
+console.log(championship);
+
+let teams = ['São Paulo', ' Corinthians', ' Palmeiras', ' Santos', ' Ponte Preta'];
+
+console.log(`Times que estão participando do campeonato: ${teams}.`);
+
+function showTeamPosition(position) {
+    if(position < 1 || position > 5) {
+        return `Não temos a informação do time que está nessa posição.`
+    }
+    return `O time que está em ${position} lugar é o ${teams[position - 1]}.`;
+}
+
+console.log(showTeamPosition(1));
+console.log(showTeamPosition(3));
+console.log(showTeamPosition(2));
+console.log(showTeamPosition(5));
+console.log(showTeamPosition(8));
+
+
+// --------------------------------------------------------------------------------------------
+
+let num = 20;
+while(num <= 30) {
+   console.log(num++);   
+}
+
+//------------------------------------------------------------------------------------------------
+
+
+function convertToHex(color) {
+    let hexa;
+    switch(color) {
+        case 'green':
+            hexa = '#00FF00';
+            break;
+        case 'black':
+            hexa = '#000000';
+            break;
+        case 'white':
+            hexa = '#FFFFFF';
+            break;
+        case 'blue':
+            hexa = '#0000FF';
+            break;
+        case 'red':
+            hexa = '#FF0000';
+            break;
+        default:
+            return `Não temos o equivalente hexadecimal para ${color}.`                  
+    }
+    return `O hexadecimal para a cor ${color} é ${hexa}.`;
+}
+
+console.log(convertToHex('blue'));
+console.log(convertToHex('green'));
+console.log(convertToHex('white'));
+console.log(convertToHex('black'));
+console.log(convertToHex('red'));
+console.log(convertToHex('purple'));
+
+//-------------------------------------------------------------------------------------------
